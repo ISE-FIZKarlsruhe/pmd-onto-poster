@@ -1,0 +1,288 @@
+@prefix : <https://materialdigital.de/eswc2021#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@base <http://materialdigital.de/eswc2021> .
+
+<http://materialdigital.de/eswc2021> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://materialdigital.de/eswc2021#hasGeometry
+<https://materialdigital.de/eswc2021#hasGeometry> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <https://materialdigital.de/eswc2021#Object> ;
+                                                          rdfs:range <https://materialdigital.de/eswc2021#Geometry> ;
+                                                          rdfs:label "hasGeometry"@en .
+
+
+###  https://materialdigital.de/eswc2021#hasMicrostructure
+<https://materialdigital.de/eswc2021#hasMicrostructure> rdf:type owl:ObjectProperty ;
+                                                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                rdfs:domain <https://materialdigital.de/eswc2021#Object> ;
+                                                                rdfs:range <https://materialdigital.de/eswc2021#Mircrostructure> ;
+                                                                rdfs:label "hasMicrostructure"@en .
+
+
+###  https://materialdigital.de/eswc2021#hasOutputObject
+<https://materialdigital.de/eswc2021#hasOutputObject> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf owl:topObjectProperty ;
+                                                              rdfs:label "hasOutputObject"@en .
+
+
+###  https://materialdigital.de/eswc2021#isInputOf
+<https://materialdigital.de/eswc2021#isInputOf> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:label "isInputOf"@en .
+
+
+###  https://materialdigital.de/eswc2021#made_from_unmutated
+<https://materialdigital.de/eswc2021#made_from_unmutated> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <https://materialdigital.de/eswc2021#Object> ;
+                                                                  rdfs:range <https://materialdigital.de/eswc2021#Object> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://materialdigital.de/eswc2021#yield_stress
+<https://materialdigital.de/eswc2021#yield_stress> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain <https://materialdigital.de/eswc2021#Mircrostructure> ;
+                                                           rdfs:range owl:real .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://materialdigital.de/eswc2021#Cutting
+<https://materialdigital.de/eswc2021#Cutting> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://materialdigital.de/eswc2021#Process> .
+
+
+###  https://materialdigital.de/eswc2021#Geometry
+<https://materialdigital.de/eswc2021#Geometry> rdf:type owl:Class .
+
+
+###  https://materialdigital.de/eswc2021#Heating
+<https://materialdigital.de/eswc2021#Heating> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://materialdigital.de/eswc2021#Process> .
+
+
+###  https://materialdigital.de/eswc2021#Mircrostructure
+<https://materialdigital.de/eswc2021#Mircrostructure> rdf:type owl:Class .
+
+
+###  https://materialdigital.de/eswc2021#Object
+<https://materialdigital.de/eswc2021#Object> rdf:type owl:Class .
+
+
+###  https://materialdigital.de/eswc2021#Process
+<https://materialdigital.de/eswc2021#Process> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://materialdigital.de/eswc2021#G0
+<https://materialdigital.de/eswc2021#G0> rdf:type owl:NamedIndividual ,
+                                                          <https://materialdigital.de/eswc2021#Geometry> .
+
+
+###  https://materialdigital.de/eswc2021#G1
+<https://materialdigital.de/eswc2021#G1> rdf:type owl:NamedIndividual ,
+                                                          <https://materialdigital.de/eswc2021#Geometry> .
+
+
+###  https://materialdigital.de/eswc2021#M0
+<https://materialdigital.de/eswc2021#M0> rdf:type owl:NamedIndividual ,
+                                                          <https://materialdigital.de/eswc2021#Mircrostructure> ;
+                                                 <https://materialdigital.de/eswc2021#yield_stress> 320. .
+
+
+###  https://materialdigital.de/eswc2021#P0
+<https://materialdigital.de/eswc2021#P0> rdf:type owl:NamedIndividual ,
+                                                          <https://materialdigital.de/eswc2021#Cutting> ;
+                                                 <https://materialdigital.de/eswc2021#hasOutputObject> <https://materialdigital.de/eswc2021#V1> .
+
+
+###  https://materialdigital.de/eswc2021#P1
+<https://materialdigital.de/eswc2021#P1> rdf:type owl:NamedIndividual ,
+                                                          <https://materialdigital.de/eswc2021#Heating> ;
+                                                 <https://materialdigital.de/eswc2021#hasOutputObject> <https://materialdigital.de/eswc2021#V2> .
+
+
+###  https://materialdigital.de/eswc2021#V0
+<https://materialdigital.de/eswc2021#V0> rdf:type owl:NamedIndividual ,
+                                                          <https://materialdigital.de/eswc2021#Object> ;
+                                                 <https://materialdigital.de/eswc2021#hasGeometry> <https://materialdigital.de/eswc2021#G0> ;
+                                                 <https://materialdigital.de/eswc2021#hasMicrostructure> <https://materialdigital.de/eswc2021#M0> ;
+                                                 <https://materialdigital.de/eswc2021#isInputOf> <https://materialdigital.de/eswc2021#P0> .
+
+
+###  https://materialdigital.de/eswc2021#V1
+<https://materialdigital.de/eswc2021#V1> rdf:type owl:NamedIndividual ,
+                                                          <https://materialdigital.de/eswc2021#Object> ;
+                                                 <https://materialdigital.de/eswc2021#hasGeometry> <https://materialdigital.de/eswc2021#G1> ;
+                                                 <https://materialdigital.de/eswc2021#isInputOf> <https://materialdigital.de/eswc2021#P1> .
+
+
+###  https://materialdigital.de/eswc2021#V2
+<https://materialdigital.de/eswc2021#V2> rdf:type owl:NamedIndividual ,
+                                                          <https://materialdigital.de/eswc2021#Object> .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://materialdigital.de/eswc2021#Cutting>
+                <https://materialdigital.de/eswc2021#Heating>
+                <https://materialdigital.de/eswc2021#Mircrostructure>
+                <https://materialdigital.de/eswc2021#Object>
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#s> rdf:type swrl:Variable .
+
+<urn:swrl:var#p> rdf:type swrl:Variable .
+
+<urn:swrl:var#m> rdf:type swrl:Variable .
+
+<urn:swrl:var#x> rdf:type swrl:Variable .
+
+<urn:swrl:var#g> rdf:type swrl:Variable .
+
+<urn:swrl:var#y> rdf:type swrl:Variable .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate <https://materialdigital.de/eswc2021#Geometry> ;
+                           swrl:argument1 <urn:swrl:var#g>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate <https://materialdigital.de/eswc2021#Object> ;
+                                      swrl:argument1 <urn:swrl:var#y>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:ClassAtom ;
+                                                 swrl:classPredicate <https://materialdigital.de/eswc2021#Heating> ;
+                                                 swrl:argument1 <urn:swrl:var#p>
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate <https://materialdigital.de/eswc2021#hasOutputObject> ;
+                                                            swrl:argument1 <urn:swrl:var#p> ;
+                                                            swrl:argument2 <urn:swrl:var#y>
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:ClassAtom ;
+                                                                       swrl:classPredicate <https://materialdigital.de/eswc2021#Object> ;
+                                                                       swrl:argument1 <urn:swrl:var#x>
+                                                                     ] ;
+                                                           rdf:rest [ rdf:type swrl:AtomList ;
+                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                  swrl:propertyPredicate <https://materialdigital.de/eswc2021#isInputOf> ;
+                                                                                  swrl:argument1 <urn:swrl:var#x> ;
+                                                                                  swrl:argument2 <urn:swrl:var#p>
+                                                                                ] ;
+                                                                      rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                             swrl:propertyPredicate <https://materialdigital.de/eswc2021#hasGeometry> ;
+                                                                                             swrl:argument1 <urn:swrl:var#x> ;
+                                                                                             swrl:argument2 <urn:swrl:var#g>
+                                                                                           ] ;
+                                                                                 rdf:rest rdf:nil
+                                                                               ]
+                                                                    ]
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <https://materialdigital.de/eswc2021#hasGeometry> ;
+                           swrl:argument1 <urn:swrl:var#y> ;
+                           swrl:argument2 <urn:swrl:var#g>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <https://materialdigital.de/eswc2021#isInputOf> ;
+                           swrl:argument1 <urn:swrl:var#s> ;
+                           swrl:argument2 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <https://materialdigital.de/eswc2021#hasMicrostructure> ;
+                                      swrl:argument1 <urn:swrl:var#s> ;
+                                      swrl:argument2 <urn:swrl:var#m>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:ClassAtom ;
+                                                 swrl:classPredicate <https://materialdigital.de/eswc2021#Object> ;
+                                                 swrl:argument1 <urn:swrl:var#x>
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate <https://materialdigital.de/eswc2021#hasOutputObject> ;
+                                                            swrl:argument1 <urn:swrl:var#p> ;
+                                                            swrl:argument2 <urn:swrl:var#x>
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:ClassAtom ;
+                                                                       swrl:classPredicate <https://materialdigital.de/eswc2021#Object> ;
+                                                                       swrl:argument1 <urn:swrl:var#s>
+                                                                     ] ;
+                                                           rdf:rest [ rdf:type swrl:AtomList ;
+                                                                      rdf:first [ rdf:type swrl:ClassAtom ;
+                                                                                  swrl:classPredicate <https://materialdigital.de/eswc2021#Cutting> ;
+                                                                                  swrl:argument1 <urn:swrl:var#p>
+                                                                                ] ;
+                                                                      rdf:rest rdf:nil
+                                                                    ]
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <https://materialdigital.de/eswc2021#hasMicrostructure> ;
+                           swrl:argument1 <urn:swrl:var#x> ;
+                           swrl:argument2 <urn:swrl:var#m>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
