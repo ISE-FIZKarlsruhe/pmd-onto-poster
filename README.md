@@ -18,11 +18,7 @@ Materials are either enabler or bottleneck for the vast majority of technologica
 
 The *pmd-onto.ttl* file provided with this repository allows to reason with an example ontology in Protege to preserve materials' structures and properties' that are not transformed by the processes. The images below sketch the example.
 
-<img src="https://github.com/danilo-dessi/pmd-onto-poster/blob/main/images/transformative-1.png" alt="image" width="500" />
-</br>
-<img src="https://github.com/danilo-dessi/pmd-onto-poster/blob/main/images/transformative-2.png" alt="image" width="500" />
-</br>
-<img src="https://github.com/danilo-dessi/pmd-onto-poster/blob/main/images/transformative-3.png" alt="image" width="500" />
+<img src="https://github.com/danilo-dessi/pmd-onto-poster/blob/main/images/onto-sketch.png" alt="image" width="500" />
 
 
 ## Acknowledgements
