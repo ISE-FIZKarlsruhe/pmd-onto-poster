@@ -3,14 +3,16 @@
 This repository contains the first resources of an ongoing work introduced by the poster paper:
 
 ```
-Alam M., Birkholz, H., Dessì, D., Eberl, C., Fliegl, H., Gumbsch, P., Von Hartrott, P., Niebel, M., Sack, H. (2021). 
+Alam M., Birkholz, H., Dessì, D., Eberl, C., Fliegl, H., Gumbsch, P., Von Hartrott, P., Mädler, L., Niebel, M., Sack, H., Akhil T. (2021). 
 Ontology Modelling for Materials Science Experiments. Submitted to ESWC 2021 Poster&Demos.
 
 ```
 
 ## Abstract
-
-Materials are either enabler or bottleneck for the vast majority of technological innovations.  The digitization of materials and processes is mainstream to create live production environments which represent physical entities and their aggregations and allow to represent, share, and understand materials changes.  However, a common standard formalization for materials knowledge in the form of taxonomies, ontologies, or knowledge graphs has not been achieved yet. This paper sketches the first efforts in modelling an ontology to describe materials science experiments. It describes what is expected from the ontology by introducing a use case where a process chain driven by the ontology enables the curation and understanding of experiments.
+Materials are either enabler or bottleneck for the vast majority of technological innovations.  The digitization of materials and processes is mandatory to create live production environments which represent physical entities and their aggregations and thus allow to represent, share, and understand materials changes. 
+However, a common standard formalization for materials knowledge in the form of taxonomies, ontologies, or knowledge graphs has not been achieved yet. 
+This paper sketches major efforts in modelling an ontology to describe materials science experiments.
+It describes what is expected from the ontology by introducing a use case where a process chain driven by the ontology enables the curation and understanding of experiments.
 
 
 
