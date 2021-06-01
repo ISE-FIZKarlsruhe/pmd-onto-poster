@@ -4,7 +4,7 @@ This repository contains the first resources of an ongoing work introduced by th
 
 ```
 Alam M., Birkholz, H., Dessì, D., Eberl, C., Fliegl, H., Gumbsch, P., Von Hartrott, P., Mädler, L., Niebel, M., Sack, H., Akhil T. (2021). 
-Ontology Modelling for Materials Science Experiments. Submitted to ESWC 2021 Poster&Demos.
+Ontology Modelling for Materials Science Experiments. UNDER REVIEW.
 
 ```
 
