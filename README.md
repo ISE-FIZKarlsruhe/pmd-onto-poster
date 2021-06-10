@@ -8,7 +8,7 @@ Ontology Modelling for Materials Science Experiments. UNDER REVIEW.
 
 ```
 
-Note: the prototype released by this repository is not the complete ontology developed by the Plattform MaterialDigital ontology. The prototype is only used to discuss Materials Science and Engineering data curation, preservation, and enrichment by means of ontologies.
+**Note**: the prototype released by this repository is not the complete ontology developed by the Plattform MaterialDigital ontology. The prototype is only used to discuss Materials Science and Engineering data curation, preservation, and enrichment by means of ontologies.
  
 
 ## Abstract
