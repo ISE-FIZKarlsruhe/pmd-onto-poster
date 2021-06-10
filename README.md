@@ -9,7 +9,10 @@ Ontology Modelling for Materials Science Experiments. UNDER REVIEW.
 ```
 
 **Note**: the prototype released by this repository is not the complete ontology developed by the Plattform MaterialDigital ontology. The prototype is only used to discuss Materials Science and Engineering data curation, preservation, and enrichment by means of ontologies.
- 
+
+
+The ontologies will be released through the official github of the project and advertized by the website www.materialdigital.de.
+
 
 ## Abstract
 Materials are either enabler or bottleneck for the vast majority of technological innovations.  The digitization of materials and processes is mandatory to create live production environments which represent physical entities and their aggregations and thus allow to represent, share, and understand materials changes. 
